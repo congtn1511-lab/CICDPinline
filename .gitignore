@@ -7,11 +7,8 @@
 mvnw
 mvnw.cmd
 
-# Docker
-Dockerfile
+# Docker compose only
 docker-compose*.yml
-*.yml
-*.yaml
 
 # Misc Spring Boot files
 HELP.md

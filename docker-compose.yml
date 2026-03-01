@@ -1,18 +1,18 @@
-version: '3.8'
-services:
-  app:
-    image: thaicong1995865/jwt-app:latest
-    ports:
-      - "8080:8080"
-    volumes:
-      - /tmp:/tmp  # Fix lỗi Read-only bằng cách mount thư mục tạm từ máy chủ
-    environment:
-      SPRING_DATA_REDIS_HOST: redis
-      SPRING_DATA_REDIS_PORT: 6379
-    depends_on:
-      - redis
-
-  redis:
-    image: redis:7-alpine
-    ports:
-      - "6379:6379"
+#version: '3.8'
+#services:
+#  app:
+#    image: thaicong1995865/jwt-app:latest
+#    ports:
+#      - "8080:8080"
+#    volumes:
+#      - /tmp:/tmp  # Fix lỗi Read-only bằng cách mount thư mục tạm từ máy chủ
+#    environment:
+#      SPRING_DATA_REDIS_HOST: redis
+#      SPRING_DATA_REDIS_PORT: 6379
+#    depends_on:
+#      - redis
+#
+#  redis:
+#    image: redis:7-alpine
+#    ports:
+#      - "6379:6379"

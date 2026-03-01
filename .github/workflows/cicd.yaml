@@ -34,8 +34,8 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/jwt-app:latest
 
-      - name: Deploy with Docker Compose
-        run: |
-          docker compose pull
-          docker compose up -d
-          docker image prune -f  # Dọn dẹp image cũ để tránh đầy ổ cứng
+#      - name: Deploy with Docker Compose
+#        run: |
+#          docker compose pull
+#          docker compose up -d
+#          docker image prune -f  # Dọn dẹp image cũ để tránh đầy ổ cứng

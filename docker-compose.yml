@@ -4,6 +4,8 @@ services:
     image: thaicong1995865/jwt-app:latest
     ports:
       - "8080:8080"
+    volumes:
+      - /tmp:/tmp  # Fix lỗi Read-only bằng cách mount thư mục tạm từ máy chủ
     environment:
       SPRING_DATA_REDIS_HOST: redis
       SPRING_DATA_REDIS_PORT: 6379

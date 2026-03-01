@@ -1,5 +1,6 @@
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
+VOLUME /tmp
 COPY src/libs src/libs
 COPY target/*.jar app.jar
 EXPOSE 8080

@@ -16,6 +16,6 @@ RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 
 EXPOSE 8080
-#ENV JAVA_TOOL_OPTIONS="-Djava.io.tmpdir=/app/tmp"
+ENV JAVA_TOOL_OPTIONS="-Djava.io.tmpdir=/app/tmp"
 # Chạy ứng dụng với tham số tối ưu hóa cho file tạm
 ENTRYPOINT ["java", "-jar", "app.jar"]

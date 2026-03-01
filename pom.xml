@@ -97,14 +97,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>   <!-- thêm dòng này -->
+                <version>3.11.0</version>
                 <configuration>
-                    <source>21</source>      <!-- thêm dòng này -->
-                    <target>21</target>      <!-- thêm dòng này -->
+                    <source>21</source>
+                    <target>21</target>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                            <version>1.18.30</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
@@ -113,7 +114,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <!-- Thêm dòng này -->
                     <includeSystemScope>true</includeSystemScope>
                     <excludes>
                         <exclude>

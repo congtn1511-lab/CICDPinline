@@ -6,32 +6,27 @@ on:
 
 jobs:
   ci-cd:
-    runs-on: self-hosted       # chạy trên máy của bạn
+    runs-on: self-hosted       # Chạy trên máy THAIPC của bạn
 
     steps:
-      # Bước 1: Lấy code từ GitHub về máy
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Bước 2: Cài Java 21
       - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
           java-version: '21'
           distribution: 'temurin'
 
-      # Bước 3: Build code → ra file .jar
       - name: Build jar with Maven
         run: mvn clean package -DskipTests
 
-      # Bước 4: Đăng nhập vào Docker Hub
       - name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # Bước 5: Build Docker image và push lên Docker Hub
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
@@ -39,8 +34,8 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/jwt-app:latest
 
-      # Bước 6: Deploy bằng Docker Compose trên máy bạn
       - name: Deploy with Docker Compose
         run: |
-          docker-compose pull
-          docker-compose up -d
+          docker compose pull
+          docker compose up -d
+          docker image prune -f  # Dọn dẹp image cũ để tránh đầy ổ cứng

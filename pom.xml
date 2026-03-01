@@ -97,7 +97,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>   <!-- thêm dòng này -->
                 <configuration>
+                    <source>21</source>      <!-- thêm dòng này -->
+                    <target>21</target>      <!-- thêm dòng này -->
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>

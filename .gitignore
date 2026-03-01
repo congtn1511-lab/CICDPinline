@@ -1,35 +1,36 @@
 # ========================
-# IntelliJ IDEA
+# Chỉ giữ src/ và pom.xml
 # ========================
+
+# Maven wrapper
+.mvn/
+mvnw
+mvnw.cmd
+
+# Docker
+Dockerfile
+docker-compose*.yml
+*.yml
+*.yaml
+
+# Misc Spring Boot files
+HELP.md
+
+# Maven build output
+target/
+
+# IntelliJ IDEA
 .idea/
 *.iws
 *.iml
 *.ipr
 
-# ========================
-# Maven
-# ========================
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/*
-!**/src/test/*
-
-# ========================
-# OS files
-# ========================
-.DS_Store
-Thumbs.db
-
-# ========================
 # Eclipse
-# ========================
 .classpath
 .project
 .settings/
 
-# ========================
 # NetBeans
-# ========================
 nbproject/
 build/
 nbbuild/
@@ -37,15 +38,22 @@ dist/
 nbdist/
 nb-configuration.xml
 
-# ========================
 # VS Code
-# ========================
 .vscode/
 
-# ========================
+# OS files
+.DS_Store
+Thumbs.db
+
 # Logs & Temp
-# ========================
 *.log
 *.tmp
 *.temp
 *.swp
+
+# Unknown files
+exporting
+naming
+resolve
+transferring
+unpacking

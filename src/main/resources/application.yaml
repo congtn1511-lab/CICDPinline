@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Jwt
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:localhost}
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+      database: 0
+
+jwt:
+  secret-key: +bf+WaqasXBZPukOvp0Ywfa9rWzwcotx3kc7yR8Pq20=
+  access-exp: 1
+  refresh-exp: 5

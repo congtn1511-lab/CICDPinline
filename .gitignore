@@ -1,0 +1,51 @@
+# ========================
+# IntelliJ IDEA
+# ========================
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# ========================
+# Maven
+# ========================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/*
+!**/src/test/*
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Eclipse
+# ========================
+.classpath
+.project
+.settings/
+
+# ========================
+# NetBeans
+# ========================
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nb-configuration.xml
+
+# ========================
+# VS Code
+# ========================
+.vscode/
+
+# ========================
+# Logs & Temp
+# ========================
+*.log
+*.tmp
+*.temp
+*.swp
